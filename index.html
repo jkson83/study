@@ -11,7 +11,7 @@
     <body>
         v-bind 연습하기 
         <article>
-            <div id = "app">{{ message }}</div>
+            <div id = "app" v-bind:title="message">내 위에 잠시 마우스를 올려보세요.</div>
         </article>
         <footer>
             footer
@@ -20,7 +20,7 @@
             var app = new Vue({
                 el: '#app',
                 data: {
-                    message: '안녕하세요 Vue!'
+                    message: '안녕하세요 Vue!' + new Data()
                 }
             })
         </script>
