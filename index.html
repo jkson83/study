@@ -1,7 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <title>Study Project</title>
+        <title>Study Project</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+        <script>
+            var app =  new Vue({
+                el:'#app',
+                data:{
+                    message:'안녕하세요 Vue!'
+                }
+            })
+        </script>
     </head>
     <body>
         <header>
@@ -17,7 +27,9 @@
         </header> 
         <article>
             <div class="Slice"></div>
-            <div class="Container"></div>
+            <div class="Container" id = "app">
+                {{ message }}
+            </div>
         </article>
         <footer>
             footer
