@@ -23,6 +23,10 @@
                 <p>{{ message }}</p>
                 <button v-on:click="reverseMesseage">메시지 뒤집기</button>
             </div>
+            <div id="app-6">
+                <p>{{ message }}</p>
+                <input v-model="message">
+            </div>
         </article>
         <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
         <script>
@@ -61,6 +65,13 @@
                     reverseMesseage:function(){
                         this.message =  this.message.split('').reverse().join('')
                     }
+                }
+            })
+            //텍스트 입력
+            var app6 = new Vue({
+                el:'#app-6',
+                data:{
+                    message:'안녕하세요. Vue!'
                 }
             })
         </script>
