@@ -8,9 +8,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        v-bind 연습하기 
+        v-bind 연습하기 - 기본문법
         <article>
             <div id = "app" ><span v-bind:title="message">내 위에 잠시 마우스를 올려보세요.</span></div>
+            <div id = "app-3"> 조건문과 반복문
+                <p v-if="seen">이제 나를 볼 수 있어요.</p>
+            </div>
         </article>
         <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
         <script>
@@ -20,9 +23,13 @@
                     message: '안녕하세요 Vue!' + new Date() + '입니다.'
                 }
             })
+
+            var app3 = new Vue({
+                el: '#app-3',
+                data:{
+                    seen:true
+                }
+            })
         </script>
-        <footer>
-            footer
-        </footer>
     </body>
 </html>
