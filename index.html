@@ -14,20 +14,37 @@
             <div id = "app-3"> 조건문과 반복문
                 <p v-if="seen">이제 나를 볼 수 있어요.</p>
             </div>
+            <div id="app-4">
+                <ol>
+                    <li v-for="todo in todos">{{ todo.text }}</li>
+                </ol>
+            </div>
         </article>
         <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
         <script>
+            //일반문번
             var app = new Vue({
                 el: '#app',
                 data: {
                     message: '안녕하세요 Vue!' + new Date() + '입니다.'
                 }
             })
-
+            //조건문
             var app3 = new Vue({
                 el: '#app-3',
                 data:{
                     seen:true
+                }
+            })
+            //반복문
+            var app4 = new Vue({
+                el:'#app-4',
+                data:{
+                    todo:[
+                        {text:'Java Script 배우기'},
+                        { text: 'Vue 배우기' },
+                        { text: '무언가 멋진 것을 만들기' }
+                    ]
                 }
             })
         </script>
