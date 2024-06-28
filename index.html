@@ -19,7 +19,7 @@
                     <li v-for="todo in todos">{{ todo.text }}</li>
                 </ol>
             </div>
-            <div>
+            <div id="app-5">
                 <p>{{ message }}</p>
                 <button v-on:click="reverseMesseage">메시지 뒤집기</button>
             </div>
@@ -61,7 +61,7 @@
                     reverseMesseage:function(){
                         this.message =  this.message.split('').reverse().join('')
                     }
-                },
+                }
             })
         </script>
     </body>
