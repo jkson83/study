@@ -10,11 +10,30 @@
     <body>
         <p>컴포넌트연습하기</p>
         <article>
-           <div></div>
+           <div id = "app-7">
+                <ol>
+                    <todo-item v-for="item in groceryList" v-bind:todo="item" v-bind:key="item-id"></todo-item>
+                </ol>
+           </div>
         </article>
         <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
         <script>
-            
+            //todo-item 이름을 가진 컴포넌트를 정의합니다.
+            Vue.component('todo-item', {
+                props:['togo'],
+                template:'<li>{{ todo.text }}</li>'
+            })
+
+            var app7 = new Vue({
+                el:'#app-7',
+                data:{
+                    groceryList:[
+                        {id: 0, text:'Vegetables'},
+                        { id: 1, text: 'Cheese' },
+                        { id: 2, text: 'Whatever else humans are supposed to eat' }
+                    ]
+                }
+            })
         </script>
     </body>
 </html>
